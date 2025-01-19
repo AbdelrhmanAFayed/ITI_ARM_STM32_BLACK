@@ -6,7 +6,7 @@
 #define TOGGLE_BIT(var,BIT) (var^=(1<<BIT))
 #define GET_BIT(VAR,BIT)  ((VAR>>BIT)&1)
 
-#define SET_HIGH_NIB(var)      (var |= 0xF0)
+/*#define SET_HIGH_NIB(var)      (var |= 0xF0)
 #define CLR_HIGH_NIB(var)      (var &= 0x0F)
 #define GET_HIGH_NIB(var)      ((var >> 4) & 0x0F)
 #define TGL_HIGH_NIB(var)      (var ^= 0xF0)
@@ -25,7 +25,7 @@
 
 #define CRSHIFT_REG(var, no)   (var = (var >> no) | (var << (sizeof(var) * 8 - no)))
 #define CLSHIFT_REG(var, no)   (var = (var << no) | (var >> (sizeof(var) * 8 - no)))
-
+*/
 
 
 #endif
