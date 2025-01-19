@@ -1,10 +1,11 @@
 #ifndef BIT_MATH_H_  
 #define BIT_MATH_H_
 
-#define SET_BIT(var,BIT) (var|=(1<<BIT))
-#define CLR_BIT(var,BIT) (var&=(~(1<<BIT)))
-#define TOGGLE_BIT(var,BIT) (var^=(1<<BIT))
-#define GET_BIT(VAR,BIT)  ((VAR>>BIT)&1)
+#define SET_MASK(REG, MASK)           ((REG) |= (MASK))
+#define CLEAR_MASK(REG, MASK)         ((REG) &= ~(MASK))
+#define TOGGLE_MASK(REG, MASK)        ((REG) ^= (MASK))
+#define IS_MASK_SET(REG, MASK)        (((REG) & (MASK)) != 0)
+#define IS_MASK_CLEAR(REG, MASK)      (((REG) & (MASK)) == 0)
 
 /*#define SET_HIGH_NIB(var)      (var |= 0xF0)
 #define CLR_HIGH_NIB(var)      (var &= 0x0F)
