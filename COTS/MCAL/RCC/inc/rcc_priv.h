@@ -135,7 +135,7 @@ typedef struct
 
 /*APB2ENR register*/
 
-#define MASK_SYSCFG_EN      (0x00000001ULL)
+#define MASK_TIM1_EN        (0x00000001ULL)
 
 #define MASK_USART1_EN      (0x00000010ULL)
 #define MASK_USART6_EN      (0x00000020ULL)
