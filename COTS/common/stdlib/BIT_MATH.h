@@ -6,6 +6,8 @@
 #define TOGGLE_MASK(REG, MASK)        ((REG) ^= (MASK))
 #define IS_MASK_SET(REG, MASK)        (((REG) & (MASK)) != 0)
 #define IS_MASK_CLEAR(REG, MASK)      (((REG) & (MASK)) == 0)
+#define SET_FIELD(REG, MASK, VALUE)    ((REG) = ((REG) & ~(MASK)) | ((VALUE) & (MASK)))
+
 
 /*#define SET_HIGH_NIB(var)      (var |= 0xF0)
 #define CLR_HIGH_NIB(var)      (var &= 0x0F)
