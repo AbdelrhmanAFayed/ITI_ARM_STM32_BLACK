@@ -1,26 +1,6 @@
 
 #include "STD_TYPES.h"
 
-/*REGISTERS*/
-#define RCC_BASE                (0x40023800ULL)
-/*access masks*/
-
-#define MASK_HSI_ON         (0x00000001ULL)
-#define MASK_HSI_RDY        (0x00000002ULL)
-
-#define MASK_HSITRIM        (0x000000F8ULL)
-#define MASK_HSICAL         (0x0000FF00ULL)
-#define MASK_HSE_ON         (0x00010000ULL)
-#define MASK_HSE_RDY        (0x00020000ULL)
-#define MASK_HSE_BYP        (0x00040000ULL)
-#define MASK_CSS_ON         (0x00080000ULL)
-
-#define MASK_PLL_ON         (0x01000000ULL)
-#define MASK_PLL_RDY        (0x02000000ULL)
-#define MASK_PLLI2S_ON      (0x04000000ULL)
-#define MASK_PLLI2S_RDY     (0x08000000ULL)
-
-
 
 /*Register map*/
 typedef struct 
@@ -81,3 +61,183 @@ typedef struct
 } RCC_MAP;
 
 
+/*REGISTERS*/
+#define RCC_BASE                (0x40023800ULL)
+/*access masks*/
+
+/*CR register*/
+#define MASK_HSI_ON         (0x00000001ULL)
+#define MASK_HSI_RDY        (0x00000002ULL)
+
+#define MASK_HSITRIM        (0x000000F8ULL)
+#define MASK_HSICAL         (0x0000FF00ULL)
+#define MASK_HSE_ON         (0x00010000ULL)
+#define MASK_HSE_RDY        (0x00020000ULL)
+#define MASK_HSE_BYP        (0x00040000ULL)
+#define MASK_CSS_ON         (0x00080000ULL)
+
+#define MASK_PLL_ON         (0x01000000ULL)
+#define MASK_PLL_RDY        (0x02000000ULL)
+#define MASK_PLLI2S_ON      (0x04000000ULL)
+#define MASK_PLLI2S_RDY     (0x08000000ULL)
+
+/*PLLCFGR register*/
+
+/*CFGR register*/
+
+/*CIR register*/
+
+/*AHB1RSTR register*/
+
+/*AHB2RSTR register*/
+
+/*APB1RSTR register*/
+
+/*APB2RSTR register*/
+
+
+/*AHB1ENR register*/
+#define MASK_GPIOA_EN       (0x00000001ULL)
+#define MASK_GPIOB_EN       (0x00000002ULL)
+#define MASK_GPIOC_EN       (0x00000004ULL)
+#define MASK_GPIOD_EN       (0x00000008ULL)
+#define MASK_GPIOE_EN       (0x00000010ULL)
+
+#define MASK_GPIOH_EN       (0x00000080ULL)
+
+#define MASK_CRC_EN         (0x00001000ULL)
+
+#define MASK_DMA1_EN        (0x00200000ULL)
+#define MASK_DMA2_EN        (0x00400000ULL)
+
+/*AHB2ENR register*/
+
+#define MASK_OTGFS_EN       (0x00000080ULL)
+
+/*APB1ENR register*/
+#define MASK_TIM2_EN        (0x00000001ULL)
+#define MASK_TIM3_EN        (0x00000002ULL)
+#define MASK_TIM4_EN        (0x00000004ULL)
+#define MASK_TIM5_EN        (0x00000008ULL)
+
+#define MASK_WWDG_EN        (0x00000800ULL)
+
+#define MASK_SPI2_EN        (0x00004000ULL)
+#define MASK_SPI3_EN        (0x00008000ULL)
+
+#define MASK_USART2_EN      (0x00020000ULL)
+
+#define MASK_I2C1_EN        (0x00200000ULL)
+#define MASK_I2C2_EN        (0x00400000ULL)
+#define MASK_I2C3_EN        (0x00800000ULL)
+
+#define MASK_PWR_EN         (0x10000000ULL)
+
+/*APB2ENR register*/
+
+#define MASK_SYSCFG_EN      (0x00000001ULL)
+
+#define MASK_USART1_EN      (0x00000010ULL)
+#define MASK_USART6_EN      (0x00000020ULL)
+
+#define MASK_ADC1_EN        (0x00000100ULL)
+
+#define MASK_SDIO_EN        (0x00000800ULL)
+#define MASK_SPI1_EN        (0x00001000ULL)
+#define MASK_SPI4_EN        (0x00002000ULL)
+#define MASK_SYSCFG_EN      (0x00004000ULL)
+
+#define MASK_TIM9_EN        (0x00010000ULL)
+#define MASK_TIM10_EN       (0x00020000ULL)
+#define MASK_TIM11_EN       (0x00040000ULL)
+
+/*AHB1LBENR regidter*/
+
+#define MASK_GPIOA_LPEN     (0x00000001ULL)
+#define MASK_GPIOB_LPEN     (0x00000002ULL)
+#define MASK_GPIOC_LPEN     (0x00000004ULL)
+#define MASK_GPIOD_LPEN     (0x00000008ULL)
+#define MASK_GPIOE_LPEN     (0x00000010ULL)
+
+#define MASK_GPIOH_LPEN     (0x00000080ULL)
+
+#define MASK_CRC_LPEN       (0x00001000ULL)
+
+#define MASK_FLITF_LPEN     (0x00008000ULL)
+#define MASK_SRAM1_LPEN     (0x00010000ULL)
+
+#define MASK_DMA1_LPEN      (0x00200000ULL)
+#define MASK_DMA2_LPEN      (0x00400000ULL)
+
+/*AHB2LPENR register*/
+
+#define MASK_OTGFS_LPEN     (0x00000080ULL)
+
+/*APB1LPENR register*/
+
+#define MASK_TIM2_LPEN      (0x00000001ULL)
+#define MASK_TIM3_LPEN      (0x00000002ULL)
+#define MASK_TIM4_LPEN      (0x00000004ULL)
+#define MASK_TIM5_LPEN      (0x00000008ULL)
+
+#define MASK_WWDG_LPEN      (0x00000800ULL)
+
+#define MASK_SPI2_LPEN      (0x00004000ULL)
+#define MASK_SPI3_LPEN      (0x00008000ULL)
+
+#define MASK_USART2_LPEN    (0x00020000ULL)
+
+#define MASK_I2C1_LPEN      (0x00200000ULL)
+#define MASK_I2C2_LPEN      (0x00400000ULL)
+#define MASK_I2C3_LPEN      (0x00800000ULL)
+
+#define MASK_PWR_LPEN       (0x10000000ULL)
+
+/*APB2LPENR register*/
+
+#define MASK_TIM1_LPEN      (0x00000001ULL)
+
+#define MASK_USART1_LPEN    (0x00000010ULL)
+#define MASK_USART6_LPEN    (0x00000020ULL)
+
+#define MASK_ADC1_LPEN      (0x00000100ULL)
+
+#define MASK_SDIO_LPEN      (0x00000800ULL)
+#define MASK_SPI1_LPEN      (0x00001000ULL)
+#define MASK_SPI4_LPEN      (0x00002000ULL)
+#define MASK_SYSCFG_LPEN    (0x00004000ULL)
+
+#define MASK_TIM9_LPEN      (0x00010000ULL)
+#define MASK_TIM10_LPEN     (0x00020000ULL)
+#define MASK_TIM11_LPEN     (0x00040000ULL)
+
+/*BDCR register*/
+
+#define MASK_LSE_ON         (0x00000001ULL)
+#define MASK_LSE_RDY        (0x00000002ULL)
+#define MASK_LSE_BYP        (0x00000004ULL)
+
+#define MASK_RTCSEL         (0x00000300ULL)
+
+#define MASK_RTCEN          (0x00008000ULL)
+#define MASK_BDRST          (0x00010000ULL)
+
+/*CSR register*/
+
+#define MASK_LSI_ON         (0x00000001ULL)
+#define MASK_LSI_RDY        (0x00000002ULL)
+
+#define MASK_RMVF           (0x01000000ULL)
+#define MASK_BORRSTF        (0x02000000ULL)
+#define MASK_PINRSTF        (0x04000000ULL)
+#define MASK_PORRSTF        (0x08000000ULL)
+#define MASK_SFTRSTF        (0x10000000ULL)
+#define MASK_IWDGRSTF       (0x20000000ULL)
+#define MASK_WWDGRSTF       (0x40000000ULL)
+#define MASK_LPWRRSTF       (0x80000000ULL)
+
+/*SSCGR register*/
+
+/*PLLI2SCFGR register*/
+
+/*DCKCFGR register*/
