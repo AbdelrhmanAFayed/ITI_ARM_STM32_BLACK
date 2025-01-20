@@ -3,6 +3,7 @@
 #include "STD_TYPES.h"
 #include "rcc.h"
 #include "rcc_priv.h"
+#include "rcc_cfg.h"
 #include "BIT_MATH.h"
 
 
