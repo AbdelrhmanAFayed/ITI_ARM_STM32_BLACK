@@ -254,6 +254,15 @@ MRCC_enuErrorStatus_t RCC_enuGetClkStatus(MRCC_enuClockSource_t Copy_enuClkSrc,M
 
 }
 
+MRCC_enuErrorStatus_t RCC_enuDisPeriphal(MRCC_enuClockPerph_t Copy_enuClkPreph)
+{
+
+}
+
+MRCC_enuErrorStatus_t RCC_enuEnPeriphal(MRCC_enuClockPerph_t Copy_enuClkPreph)
+{
+    
+}
 MRCC_enuErrorStatus_t MRCC_enuSelectClkSRC(MRCC_enuClockSource_t Copy_enuClkSrc)
 {
 
